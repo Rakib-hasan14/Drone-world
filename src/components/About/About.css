@@ -1,0 +1,8 @@
+.about-sec{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 20px;
+}
+.about-img img{
+    width: 100%;
+}

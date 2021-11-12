@@ -1,0 +1,35 @@
+.footer{
+    background-color: darkgray;
+    color: honeydew;
+}
+.footer-title{
+    color: rgb(243, 243, 243);
+}
+.footer-left ul{
+    list-style: none;
+    color: rgb(243, 243, 243);
+
+}
+.footer-left{
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    .footer-cover{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left{
+        margin-right: 30px;
+    }
+    .footer-right{
+        width: 100%!important;
+    }
+    .footer-title{
+        font-size: 27px;
+    }
+    .footer-det{
+        font-size: 14px;
+        margin-bottom: 17px;
+    }
+}
