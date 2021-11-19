@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import SingleDrone from '../SingleDrone/SingleDrone';
-import './Drones.css'
 
-const Drones = () => {
+const AllDrons = () => {
     const [drones , setDrones] = useState([])
 
     useEffect(()=> {
         fetch('http://localhost:5000/drones')
         .then(res => res.json())
-        .then(data => setDrones(data.slice(0,6)))
+        .then(data => setDrones(data))
     } , [])
     return (
-        <div className='my-5 text-center container'>
-            <h1 className='text-primary'>Best drones</h1>
-            <div className='grid-sec mt-4'>
+        <div className='text-center container my-5'>
+            <h1 className='text-primary'>All drones</h1>
+            <div className="grid-sec">
                 {
                     drones.map(drone => <SingleDrone
-                    key={drone.name}
+                    key={drone._id}
                     drone={drone}
                     ></SingleDrone>)
                 }
@@ -25,4 +24,4 @@ const Drones = () => {
     );
 };
 
-export default Drones;
+export default AllDrons;

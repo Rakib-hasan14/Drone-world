@@ -1,0 +1,11 @@
+.drones{
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+.drones img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.drone-det{
+    
+}

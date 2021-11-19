@@ -21,25 +21,24 @@ const Header = () => {
             <Link className="nav-link active text-white" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link text-white" to="/info&direction">INFO & DIRECTION</Link>
-            </li>
-            <li className="nav-item">
-            <Link className="nav-link text-white" to="/dinnig">DINNIG</Link>
+            <Link className="nav-link text-white" to="/alldrones">More drones</Link>
             </li>
             
-            <Link className="nav-link text-white" to='login'>
-            <li className="nav-item">Login</li>
-            </Link>
-            
-            <li className="nav-item ">
-            <Link className="nav-link text-white" to='/register'>REGISTER</Link>
-            </li>
             {
             user.email && <li className="nav-item">
             <Link className="nav-link text-white" to='/dashboard'>Dashboard
             </Link>
             </li>
             }
+
+            <Link className="nav-link text-white" to='login'>
+            <li className="nav-item">Login</li>
+            </Link>
+            
+
+            <li className="nav-item ">
+            <Link className="nav-link text-white" to='/register'>REGISTER</Link>
+            </li>
             {
             user.email && <div>
                 

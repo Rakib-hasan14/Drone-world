@@ -6,3 +6,9 @@
 .about-img img{
     width: 100%;
 }
+
+@media screen and (max-width: 500px) {
+    .about-sec{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -42,6 +42,7 @@ const Register = () => {
             
             setUserName();
             setUser(user)
+            userData(email , name)
             window.location.reload();
         })
         .catch((error) => {
@@ -51,11 +52,24 @@ const Register = () => {
   e.preventDefault();
     }
 
+    // POST DB users
+    const userData = (email , displayName) => {
+        const user = {email , displayName}
+        fetch('http://localhost:5000/users',{
+            method: 'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then()
+    }
+
     
 
     return (
-        <div className='w-50 mx-auto text-center my-5'>
-            <h1>Register please</h1>
+        <div className='w-50 mx-auto text-center my-5 res-input'>
+            <h1 className='res-title'>Register please</h1>
             <form onSubmit={handleRegister}>
                 <label>Name </label>
                 <input className='w-75' onBlur={userName} type="text" placeholder='Name' required/>

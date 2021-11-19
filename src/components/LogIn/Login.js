@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useAthentication from '../Hooks/useAthentication';
+import './Login.css'
 
 const Login = () => {
     const [email , setEmail] = useState('');
@@ -32,8 +33,8 @@ const Login = () => {
         e.preventDefault()
     }
     return (
-        <div className='w-50 mx-auto text-center my-4'>
-            <h1 className='mb-3'>Log In please!</h1>
+        <div className='w-50 mx-auto text-center my-4  res-input'>
+            <h1 className='mb-3 res-title'>Log In please!</h1>
             <form onSubmit={signIn}>
                 <label>Email</label>
                 <input onBlur={userEmail} type="text" placeholder='Email'/>
