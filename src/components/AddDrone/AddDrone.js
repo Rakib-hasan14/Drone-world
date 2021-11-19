@@ -43,7 +43,7 @@ const AddDrone = () => {
             img: img,
             price: price
         }
-         axios.post('http://localhost:5000/drones', data)
+         axios.post('https://murmuring-citadel-01807.herokuapp.com/drones', data)
           .then(res => {
             if(res.data.insertedId){
                   alert('Successfully Added!')

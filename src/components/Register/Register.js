@@ -55,7 +55,7 @@ const Register = () => {
     // POST DB users
     const userData = (email , displayName) => {
         const user = {email , displayName}
-        fetch('http://localhost:5000/users',{
+        fetch('https://murmuring-citadel-01807.herokuapp.com/users',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'

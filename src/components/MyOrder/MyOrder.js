@@ -6,7 +6,7 @@ const MyOrder = () => {
     const [order , setOrder] = useState([]);
     const {user} = useAthentication();
     useEffect(()=> {
-        fetch('http://localhost:5000/orders')
+        fetch('https://murmuring-citadel-01807.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrder(data))
     } , [])
@@ -17,7 +17,7 @@ const MyOrder = () => {
     const cancalOrder = (id) => {
         const corfirmation = window.confirm('Are you sure to cancal your order ?');
         if (corfirmation) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://murmuring-citadel-01807.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

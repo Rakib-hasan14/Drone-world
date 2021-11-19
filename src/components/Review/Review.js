@@ -22,7 +22,7 @@ const Review = () => {
             rvDes: rvDes,
             rate: rate,
         }
-         axios.post('http://localhost:5000/reviews', data)
+         axios.post('https://murmuring-citadel-01807.herokuapp.com/reviews', data)
           .then(res => {
             if(res.data.insertedId){
                   alert('Thank You for yor review!')

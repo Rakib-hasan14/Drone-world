@@ -11,7 +11,7 @@ const DroneOrder = () => {
     const {displayName , email} = user;
     
     useEffect(()=> {
-        fetch(`http://localhost:5000/drones/${id}`)
+        fetch(`https://murmuring-citadel-01807.herokuapp.com/drones/${id}`)
         .then(res => res.json())
         .then(data => setOrder(data))
     },[])
@@ -48,7 +48,7 @@ const DroneOrder = () => {
             phone: phone,
             status: 'Pending'
         }
-         axios.post('http://localhost:5000/orders', data)
+         axios.post('https://murmuring-citadel-01807.herokuapp.com/orders', data)
           .then(res => {
             if(res.data.insertedId){
                   alert('Successfully Order. Thank You!')

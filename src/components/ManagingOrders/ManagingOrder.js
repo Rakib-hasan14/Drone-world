@@ -7,7 +7,7 @@ const ManagingOrder = ({ord}) => {
     //Update Status
     const handleStatus = id => {
         const approved = {status: 'Approved'}
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://murmuring-citadel-01807.herokuapp.com/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +28,7 @@ const ManagingOrder = ({ord}) => {
      const handleDelete = (id) => {
         const corfirmation = window.confirm('Are you sure to Delete this Booking ?');
         if (corfirmation) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://murmuring-citadel-01807.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

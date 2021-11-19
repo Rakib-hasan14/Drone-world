@@ -6,7 +6,7 @@ const Dashboard = () => {
     const [allUser , setAllUser] = useState([])
     const {user} =  useAthentication()
     useEffect(()=> {
-        fetch('http://localhost:5000/users')
+        fetch('https://murmuring-citadel-01807.herokuapp.com/users')
         .then(res => res.json())
         .then(data => setAllUser(data))
     } , [])

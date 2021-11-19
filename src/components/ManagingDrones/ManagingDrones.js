@@ -6,7 +6,7 @@ const ManagingDrones = ({drone}) => {
         
             const corfirmation = window.confirm('Are you sure to delete this Drone ?');
             if (corfirmation) {
-                fetch(`http://localhost:5000/drones/${id}`, {
+                fetch(`https://murmuring-citadel-01807.herokuapp.com/drones/${id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())

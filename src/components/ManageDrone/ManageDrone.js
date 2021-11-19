@@ -4,7 +4,7 @@ import ManagingDrones from '../ManagingDrones/ManagingDrones';
 const ManageDrone = () => {
     const [drones , setDrones] = useState([])
     useEffect(()=> {
-        fetch('http://localhost:5000/drones')
+        fetch('https://murmuring-citadel-01807.herokuapp.com/drones')
         .then(res => res.json())
         .then(data => setDrones(data))
     }, [])
